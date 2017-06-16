@@ -51,13 +51,13 @@ uint8_t *dump_program_data(Elf *elf_object, int *size)
 	if (phdr_num == 0)
 		return NULL;
 
-	for (int i = 0; i < phdr_num; i++) {
+	for (size_t i = 0; i < phdr_num; i++) {
 		if (gelf_getphdr(elf_object, i, &phdr) != &phdr) {
 			printf("Problem during ELF parsing\n");
 			return NULL;
 		}
 
-		printf("Program header %d: addr 0x%08X,", i, (unsigned int)phdr.p_paddr);
+		printf("Program header %lu: addr 0x%08X,", i, (unsigned int)phdr.p_paddr);
 		printf(" size 0x%08X\n", (unsigned int)phdr.p_filesz);
 
 		if (phdr.p_paddr + phdr.p_filesz >= max_paddr) {
