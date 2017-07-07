@@ -1,6 +1,6 @@
 CAPI=1
 [main]
-name = ::elf-loader:1.0.1
+name = ::elf-loader:1.0.2
 description = Generic ELF loader
 
 [vpi]
