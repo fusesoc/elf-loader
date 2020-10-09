@@ -1,6 +1,6 @@
 CAPI=1
 [main]
-name = ::elf-loader:1.0.2
+name = ::elf-loader:1.0.3
 description = Generic ELF loader
 
 [vpi]
@@ -13,7 +13,7 @@ src_files     = elf-loader.c
 include_files = elf-loader.h
 libs          = -lelf
 
-[parameter elf-load]
+[parameter elf_load]
 datatype    = file
 description = ELF file to preload to memory
 paramtype   = plusarg
